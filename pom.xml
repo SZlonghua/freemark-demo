@@ -72,7 +72,12 @@
 						${project.build.directory}/product
 					</outputDirectory>
 					<archive>
-						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+						<manifest>
+							<!--是否添加依赖-->
+							<addClasspath>true</addClasspath>
+							<!--设置启动类-->
+							<mainClass>com.liaotao.freemark.FreemarkDemoApplication</mainClass>
+						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
@@ -92,9 +97,29 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						&lt;!&ndash; here the phase you need &ndash;&gt;
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/product</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/target/freemark-demo-0.0.1-SNAPSHOT.jar</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>-->
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
 				<configuration>
