@@ -20,7 +20,7 @@ public class FreemarkDemoApplication {
 
 	@RequestMapping("/test")
 	public String test(){
-		return "hello word!";
+		return "hello word test!";
 	}
 
 }
