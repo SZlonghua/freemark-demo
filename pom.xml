@@ -77,6 +77,7 @@
 							<addClasspath>true</addClasspath>
 							<!--设置启动类-->
 							<mainClass>com.liaotao.freemark.FreemarkDemoApplication</mainClass>
+							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
 					</archive>
 				</configuration>
