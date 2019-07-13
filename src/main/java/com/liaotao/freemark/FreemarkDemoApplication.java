@@ -18,4 +18,9 @@ public class FreemarkDemoApplication {
 		return "hello word!";
 	}
 
+	@RequestMapping("/test")
+	public String test(){
+		return "hello word!";
+	}
+
 }
